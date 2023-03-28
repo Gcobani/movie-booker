@@ -13,6 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'App\Http\Controllers\BookingController@index')
+    ->name('home');
+
+Route::get('/create_booking', 'App\Http\Controllers\BookingController@createBooking')
+    ->name('create-booking');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

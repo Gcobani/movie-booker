@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b56bfb5d21eaae286e532c3ed2f8941",
+    "content-hash": "6fed5b3411129844898d62a889ea092a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -632,6 +632,79 @@
             "time": "2022-02-23T14:25:13+00:00"
         },
         {
+            "name": "glhd/aire",
+            "version": "2.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/glhd/aire.git",
+                "reference": "5c80cc63fc1ed92e797af2128f76cd91070e022a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/glhd/aire/zipball/5c80cc63fc1ed92e797af2128f76cd91070e022a",
+                "reference": "5c80cc63fc1ed92e797af2128f76cd91070e022a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/events": "~5.8.28|^6|^7|^8|^9|^10|11.x-dev|dev-master",
+                "illuminate/support": "~5.8.28|^6|^7|^8|^9|^10|11.x-dev|dev-master",
+                "illuminate/view": "~5.8.28|^6|^7|^8|^9|^10|11.x-dev|dev-master"
+            },
+            "require-dev": {
+                "barryvdh/reflection-docblock": "^2.0",
+                "friendsofphp/php-cs-fixer": "^3.5",
+                "guzzlehttp/guzzle": "~6.0|~7.0",
+                "mockery/mockery": "^1.4",
+                "orchestra/testbench": "^6.24|^7.10|^8|9.x-dev|10.x-dev|dev-master",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^9.5",
+                "symfony/css-selector": "^5.4",
+                "symfony/dom-crawler": "^5.4"
+            },
+            "suggest": {
+                "glhd/aire-tailwind-custom-forms": "Use the Tailwind custom forms plugin for even nicer looking forms"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Galahad\\Aire\\Support\\AireServiceProvider"
+                    ],
+                    "aliases": {
+                        "Aire": "Galahad\\Aire\\Support\\Facades\\Aire"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Galahad\\Aire\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Morrell",
+                    "homepage": "http://www.cmorrell.com"
+                }
+            ],
+            "description": "Modern Laravel form builder. Remembers old input, retrieves error messages and comes with beautiful Tailwind-based markup out of the box.",
+            "keywords": [
+                "Forms",
+                "aire",
+                "laravel",
+                "tailwind"
+            ],
+            "support": {
+                "issues": "https://github.com/glhd/aire/issues",
+                "source": "https://github.com/glhd/aire/tree/2.7.0"
+            },
+            "time": "2023-02-17T20:50:07+00:00"
+        },
+        {
             "name": "graham-campbell/result-type",
             "version": "v1.1.1",
             "source": {
@@ -1023,6 +1096,63 @@
                 }
             ],
             "time": "2023-03-09T13:19:02+00:00"
+        },
+        {
+            "name": "laravel/breeze",
+            "version": "v1.9.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "6f6a2588c429ea39821ec9add48442b05fe343f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/6f6a2588c429ea39821ec9add48442b05fe343f7",
+                "reference": "6f6a2588c429ea39821ec9add48442b05fe343f7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^8.42|^9.0",
+                "illuminate/support": "^8.42|^9.0",
+                "illuminate/validation": "^8.42|^9.0",
+                "php": "^7.3|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "time": "2022-05-30T13:21:35+00:00"
         },
         {
             "name": "laravel/framework",
