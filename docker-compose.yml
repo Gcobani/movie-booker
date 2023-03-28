@@ -1,0 +1,42 @@
+version: '3.8'
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'php artisan serve --host=0.0.0.0'
+    container_name: movie-booker-php
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
+    depends_on:
+      - mysql-db
+    networks:
+      - default
+
+  queue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: 'php artisan queue:work'
+    container_name: movie-booker-queue
+    depends_on:
+      - mysql-db
+    networks:
+      - default
+
+  mysql-db:
+    image: mysql:8.0
+    container_name: movie-booker-mysql
+    environment:
+      MYSQL_DATABASE: moviebooker
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - ./storage/dbdata:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - default
