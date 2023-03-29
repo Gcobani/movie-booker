@@ -37,4 +37,15 @@ class Theatre extends Model
     {
         return $this->belongsTo(CinemaLocation::class);
     }
+
+    /**
+     * @return string[]
+     */
+    public static function listify(): array
+    {
+        return static::all()
+            ->pluck('name', 'id')
+            ->sort()
+            ->toArray();
+    }
 }

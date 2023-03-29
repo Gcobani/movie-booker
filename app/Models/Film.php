@@ -28,4 +28,15 @@ class Film extends Model
     {
         return $this->belongsTo(Theatre::class);
     }
+
+    /**
+     * @return string[]
+     */
+    public static function listify(): array
+    {
+        return static::all()
+            ->pluck('name', 'id')
+            ->sort()
+            ->toArray();
+    }
 }

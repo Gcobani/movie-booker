@@ -27,4 +27,15 @@ class CinemaLocation extends Model
     {
         return $this->hasMany(Theatre::class);
     }
+
+    /**
+     * @return string[]
+     */
+    public static function listify(): array
+    {
+        return static::all()
+            ->pluck('address', 'id')
+            ->sort()
+            ->toArray();
+    }
 }
